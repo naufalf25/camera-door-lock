@@ -14,12 +14,12 @@
 #include <addons/RTDBHelper.h>
 
 // Menginisialisasi kebutuhan login Firebase
-#define API_KEY "##########"
-#define USER_EMAIL "##########"
-#define USER_PASSWORD "##########"
-#define STORAGE_BUCKET_ID "##########"
-#define DATABASE_URL "##########"
-#define FIREBASE_PROJECT_ID "##########"
+#define API_KEY "AIzaSyDMenZdbpkPeOpQYkSTMwKcuJnTJgplABE"
+#define USER_EMAIL "user@test.com"
+#define USER_PASSWORD "test@123"
+#define STORAGE_BUCKET_ID "door-lock-esp32-b79a1.appspot.com"
+#define DATABASE_URL "https://door-lock-esp32-b79a1-default-rtdb.asia-southeast1.firebasedatabase.app"
+#define FIREBASE_PROJECT_ID "door-lock-esp32-b79a1"
 
 // Inisialisasi path untuk menyimpan foto secara local
 #define FILE_PHOTO "/photo.jpg"
@@ -67,8 +67,6 @@ int timestamp;
 int LED = 4;
 
 // Inisialisasi kebutuhan variabel char
-char ssid[] = "SATA Alin";
-char password[] = "dasadarma@1973";
 const char *ntpServer = "pool.ntp.org";
 
 // Inisialisasi kebutuhan variabel String
