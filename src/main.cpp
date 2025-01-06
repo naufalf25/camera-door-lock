@@ -331,11 +331,6 @@ void checkFirebaseData()
         {
           takeNewPhoto = true;
           taskCompleted = false;
-          // Kembalikan data perintah ke 0
-          if (Firebase.RTDB.setInt(&fbdo, outputPath, 0))
-          {
-            Serial.println("Change data to default Success");
-          }
         }
       }
     }
@@ -410,6 +405,12 @@ void uploadPicture()
     // Kirimkan URL dan timestamp foto ke Database
     Serial.printf("Update Live Image... %s\n", Firebase.RTDB.setJSON(&fbdo, transferImagePath.c_str(), &json) ? "ok" : fbdo.errorReason().c_str());
     Serial.printf("Add tracker image... %s\n", Firebase.RTDB.setJSON(&fbdo, parentPath.c_str(), &json) ? "ok" : fbdo.errorReason().c_str());
+
+    // Kembalikan data perintah ke 0
+    if (Firebase.RTDB.setInt(&fbdo, outputPath, 0))
+    {
+      Serial.println("Change data to default Success");
+    }
   }
   else
   {
